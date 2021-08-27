@@ -1,0 +1,71 @@
+@page "/"
+
+<h1>Bem-vindo</h1>
+
+<p>Vamos realizar seu Pre-Cadastro</p>
+
+<h5>Dados básicos:</h5>
+<table>
+ <tr>
+   <td>CNPJ:</td>
+   <td><input type="text" name="cnpj" size="8"> - <input type="text" name="cnpj2" size="5">  <br /></td>
+ </tr>
+ <tr>
+   <td>Inscrição Estadual:</td>
+   <td><input type="text" name="inscricaoEstadual" size="30"> <br /></td>
+ </tr>
+  <tr>
+   <td>Inscrição Municipal:</td>
+   <td><input type="text" name="inscricaoMunicipal" size="30" value="Não declarado"> <br /></td>
+ </tr>
+ <tr>
+    <td>Regime Tributário:</td>
+    <td><input type="text" name="regimeTributario" size="30" value="Simples Nacional"> <br /></td>
+ </tr>
+ <tr>
+    <td>Contribuinte:</td>
+    <td><input type="text" name="contribuinte" size="30" placeholder="Contribuinte ICMS"> <br /></td>
+ </tr>
+ <tr>
+    <td>Razão Social:</td>
+    <td><input type="text" name="RazaoSocial" size="60"> <br /></td>
+ </tr>
+  <tr>
+    <td>Nome Fantasia:</td>
+    <td><input type="text" name="nomeFantasia" size="60"> <br /></td>
+ </tr>
+@* <tr>
+    <td>Data de Nas.:</td>
+    <td>
+        <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+        <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+        <input type="text" name="ano" size="4" maxlength="4" value="aaaa"><br />
+    </td>
+</tr> *@
+</table>
+<p>
+<h5>Logradouro:</h5>
+</p>
+
+<table>
+    <tr>
+        <td>Rua:</td>
+        <td><input type="text" name="Rua" size="40"> Número: <input type="text" name="cnpj2" size="5">  <br /></td>
+    </tr>
+    <tr>
+        <td>Bairro:</td>
+        <td><input type="text" name="Bairro" size="40"><br /></td>
+    </tr>
+    <tr>
+        <td>CEP:</td>
+        <td><input type="text" name="Bairro" size="20"><br /></td>
+    </tr>
+</table>
+<p></p>
+<Todo />
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@* <Counter IncrementAmout="10" /> *@
+

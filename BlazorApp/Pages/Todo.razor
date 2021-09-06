@@ -5,6 +5,9 @@
 <input placeholder="Nome" @bind="newTodo" />
 <button @onclick="AddTodo">Adicionar </button>
 
+<input placeholder="NomeTeste" @bind="name" />
+<button @onclick="Renomear">Renomear </button>
+
 <p></p>
 
 <ul>
@@ -21,12 +24,21 @@
 @code {
     private List<TodoItem> todos = new();
     private string newTodo, CPF, RG, Telefone, email;
+    public static string name;
+    private string campo;
     private void AddTodo()
     {
         if (!string.IsNullOrWhiteSpace(newTodo))
         {
-            todos.Add(new TodoItem { Title = newTodo});
+            todos.Add(new TodoItem { Title = newTodo });
             newTodo = string.Empty;
         }
     }
+
+    private void Renomear()
+    {
+        campo = name;
+    }
 }
+<input @bind="campo" />
+

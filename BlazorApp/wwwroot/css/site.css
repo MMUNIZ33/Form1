@@ -48,3 +48,24 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+/*Formulário Principal*/
+
+.campo {
+    margin-bottom: 1em;
+}
+
+    .campo label {
+        margin-bottom: 0.2em;
+        display: block;
+    }
+
+
+fieldset {
+    border: 0;
+}
+
+    fieldset.grupo .campo {
+        float: left;
+        margin-right: 1em;
+    }

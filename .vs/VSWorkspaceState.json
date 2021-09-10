@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "\\API",
+    "\\API\\API",
+    "\\API\\API\\Models",
+    "\\BlazorApp",
+    "\\BlazorApp\\Data",
+    "\\BlazorApp\\Pages"
   ],
-  "PreviewInSolutionExplorer": true
+  "PreviewInSolutionExplorer": false
 }

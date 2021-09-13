@@ -5991,11 +5991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus Muniz\\Desktop\\FrmBlazor\\API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Matheus Muniz\\Desktop\\FrmBlazor\\API\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Matheus Muniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus Muniz\\Desktop\\FrmBlazor\\API\\API\\obj\\",
+      "outputPath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matheus Muniz\\AppData\\Roaming\\NuGet\\NuGet.Config",

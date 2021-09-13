@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0YEAHDyLKwu2CYhTFkJzIsF0oXYXUlvIqPQCKHhe9bmvHsnMJopbZQ1UeWi3AUIletb4id35t3L+C/YhERtmTw==",
+  "dgSpecHash": "sZ8eiuCSYJaCWaVISB+Q6vXPgKKBk9Dn9ZtS3pvSO96inGwaKg/LZcrqZTp31k8c8nrkdmkXbyc/WujmKRMOXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Muniz\\Desktop\\FrmBlazor\\BlazorApp\\BlazorApp.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\BlazorApp\\BlazorApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Muniz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Matheus Muniz\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

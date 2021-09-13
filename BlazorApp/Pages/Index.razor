@@ -35,10 +35,10 @@
         <label><strong>Tipo de Pessoa:</strong></label>
         <br />
         <label>
-            <input type="radio" name="tipoPessoa" value="fisica" checked />Física
+            <input  type="radio" name="tipoPessoa" @*value="@SelectedValue"*@ id="fisica" /> Física
         </label>
         <label>
-            <input type="radio" name="tipoPessoa" value="juridica" />Jurídica
+            <input type="radio" name="tipoPessoa" value="juridica" /> Jurídica
         </label>
     </div>
 
@@ -47,15 +47,15 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="cpf"><strong>CPF</strong></label>
-            <input type="text" name="cpf" id="cpf" required />
+            <input type="text" name="cpf" id="cpf" required @*@bind="campoCPF"*@ disabled />
         </div>
         <div class="campo">
             <label for="rg"><strong>RG</strong></label>
-            <input type="text" name="rg" id="rg" required />
+            <input type="text" name="rg" id="rg" required disabled />
         </div>
         <div class="campo">
             <label for="cnpj"><strong>CNPJ</strong></label>
-            <input type="text" name="cnpj" id="cnpj" required />
+            <input type="text" name="cnpj" id="cnpj" required disabled />
         </div>
     </fieldset>
 
@@ -63,21 +63,21 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="iEstadual"><strong>Inscrição Estadual</strong></label>
-            <input type="text" name="iEstadual" id="iEstadual" />
+            <input type="text" name="iEstadual" id="iEstadual" disabled />
         </div>
         <div class="campo">
             <label for="iMunicipal"><strong>Inscrição Municipal</strong></label>
-            <input type="text" name="iMunicipal" id="iMunicipal" />
+            <input type="text" name="iMunicipal" id="iMunicipal" disabled />
         </div>
     </fieldset>
     <fieldset class="grupo">
         <div class="campo">
             <label for="regime"><strong>Regime Tributário</strong></label>
-            <input type="text" name="regime" id="regime" />
+            <input type="text" name="regime" id="regime" disabled />
         </div>
         <div class="campo">
             <label for="contribuinte"><strong>Contribuinte</strong></label>
-            <input type="text" name="contribuinte" id="contribuinte" />
+            <input type="text" name="contribuinte" id="contribuinte" disabled />
         </div>
     </fieldset>
 
@@ -110,7 +110,7 @@
     </fieldset>
 
     <fieldset class="grupo">
-        
+
         <div class="campo">
             <label for="cidade"><strong>Cidade</strong></label>
             <input type="text" name="cidade" id="cidade" size="20" />
@@ -134,52 +134,107 @@
             <input type="text" name="telefone" id="telefone" size="15" />
         </div>
     </fieldset>
+    <fieldset class="grupo">
+        <div class="campo">
+            <label for="email"><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" size="35" />
+        </div>
+        <div class="campo">
+            <label for="setor"><strong>Setor</strong></label>
+            <input type="text" name="setor" id="setor" />
+        </div>
+    </fieldset>
+    <div class="check">
+        <label><strong>Definir contato como:</strong></label>
+        <br />
+        <label>
+            <input type="checkbox" name="definirContato" value="signatario" /> Signatário
+        </label>
+        <br />
+        <label>
+            <input type="checkbox" name="definirContato" value="RepresentanteLegal" /> Representante Legal
+        </label>
+    </div>
 
     <!-- Botão para enviar formulário -->
 
-    <button class="btn btn-primary" type="submit" onsubmit="">Enviar</button>
+    <button class="btn btn-primary" type="submit" onsubmit=""><strong>Enviar</strong></button>
 
 </form>
 
+@*@code{
+    //[Parameter]
+    //public TValue SelectedValue { get; set; }
+
+    //private void OnChange(ChangeEventArgs args)
+    //{
+    //    CurrentValueAsString = args.Value.ToString();
+    //}
+
+    public bool tipoPessoa, pessoaFisica, pessoaJuridica, campoCPF;
+    public bool fisicaBool { get; set; }
+
+    private void HabilitarCampos()
+    {
+        if (fisicaBool == true)
+        {
+
+        }
+    }
+
+    private void HabilitarJuridica()
+    {
+
+    }
+}*@
+
+
+
+
+
+
+
+
+
 <br />
-<table>
-    <tr>
-        <td>CNPJ:</td>
-        <td><input type="text" name="cnpj" size="8"> - <input type="text" name="cnpj2" size="5">  <br /></td>
-    </tr>
-    <tr>
-        <td>Inscrição Estadual:</td>
-        <td><input type="text" name="inscricaoEstadual" size="30"> <br /></td>
-    </tr>
-    <tr>
-        <td>Inscrição Municipal:</td>
-        <td><input type="text" name="inscricaoMunicipal" size="30" value="Não declarado"> <br /></td>
-    </tr>
-    <tr>
-        <td>Regime Tributário:</td>
-        <td><input type="text" name="regimeTributario" size="30" value="Simples Nacional"> <br /></td>
-    </tr>
-    <tr>
-        <td>Contribuinte:</td>
-        <td><input type="text" name="contribuinte" size="30" placeholder="Contribuinte ICMS"> <br /></td>
-    </tr>
-    <tr>
-        <td>Razão Social:</td>
-        <td><input type="text" disabled="disabled" name="RazaoSocial" size="60"> <br /></td>
-    </tr>
-    <tr>
-        <td>Nome Fantasia:</td>
-        <td><input type="text" name="nomeFantasia" size="60" @bind="txtName" /> <br /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td2>
-            <p>
-                <button @onclick="ForTable">Enviar para tabela </button>
-            </p>
-        </td2>
-    </tr>
-</table>
+@*<table>
+        <tr>
+            <td>CNPJ:</td>
+            <td><input type="text" name="cnpj" size="8"> - <input type="text" name="cnpj2" size="5">  <br /></td>
+        </tr>
+        <tr>
+            <td>Inscrição Estadual:</td>
+            <td><input type="text" name="inscricaoEstadual" size="30"> <br /></td>
+        </tr>
+        <tr>
+            <td>Inscrição Municipal:</td>
+            <td><input type="text" name="inscricaoMunicipal" size="30" value="Não declarado"> <br /></td>
+        </tr>
+        <tr>
+            <td>Regime Tributário:</td>
+            <td><input type="text" name="regimeTributario" size="30" value="Simples Nacional"> <br /></td>
+        </tr>
+        <tr>
+            <td>Contribuinte:</td>
+            <td><input type="text" name="contribuinte" size="30" placeholder="Contribuinte ICMS"> <br /></td>
+        </tr>
+        <tr>
+            <td>Razão Social:</td>
+            <td><input type="text" disabled="disabled" name="RazaoSocial" size="60"> <br /></td>
+        </tr>
+        <tr>
+            <td>Nome Fantasia:</td>
+            <td><input type="text" name="nomeFantasia" size="60" @bind="txtName" /> <br /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td2>
+                <p>
+                    <button @onclick="ForTable">Enviar para tabela </button>
+                </p>
+            </td2>
+        </tr>
+    </table>*@
 
 
 @code
@@ -205,26 +260,26 @@
 @*<input @bind="result" />*@
 
 
-<p>
-    <h5>Logradouro:</h5>
-</p>
+@*<p>
+        <h5>Logradouro:</h5>
+    </p>*@
 
-<table>
-    <tr>
-        <td>Rua:</td>
-        <td><input type="text" name="Rua" size="40"> Número: <input type="text" name="cnpj2" size="5">  <br /></td>
-    </tr>
-    <tr>
-        <td>Bairro:</td>
-        <td><input type="text" name="Bairro" size="40"><br /></td>
-    </tr>
-    <tr>
-        <td>CEP:</td>
-        <td><input type="text" name="Bairro" size="20"><br /></td>
-    </tr>
-</table>
-<p></p>
-<Todo />
+@*<table>
+        <tr>
+            <td>Rua:</td>
+            <td><input type="text" name="Rua" size="40"> Número: <input type="text" name="cnpj2" size="5">  <br /></td>
+        </tr>
+        <tr>
+            <td>Bairro:</td>
+            <td><input type="text" name="Bairro" size="40"><br /></td>
+        </tr>
+        <tr>
+            <td>CEP:</td>
+            <td><input type="text" name="Bairro" size="20"><br /></td>
+        </tr>
+    </table>
+    <p></p>
+    <Todo />*@
 
 
 <SurveyPrompt Title="How is Blazor working for you?" />

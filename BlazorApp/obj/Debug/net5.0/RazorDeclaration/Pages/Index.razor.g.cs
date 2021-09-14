@@ -98,7 +98,7 @@ using API.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 242 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
+#line 238 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
  
 
     public string txtName, txtTelefone, txtEmail;

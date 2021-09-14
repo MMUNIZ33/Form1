@@ -4,60 +4,52 @@
 
 <p>Vamos realizar seu Pre-Cadastro</p>
 
-
 <SurveyPrompt Title="Dados Básicos" />
 
 <!-- Formulário Principal -->
 
 <form>
-    <fieldset class="grupo">
-        <div class="campo">
+    <div class="row">
+        <div class="col">
             <label for="name"><strong>Nome Completo </strong></label>
-            <input type="text" name="nome" id="nome" size="60" required />
+            <input class="form-control" placeholder="Ex: Josiane Silva" type="text" name="nome" id="nome" size="60" required />
         </div>
-
-        <div class="campo">
+        <div class="col">
             <label for="tratamento"><strong>Tratamento </strong></label>
-            <input type="text" name="tratamento" id="tratamento" size="40" required />
+            <input class="form-control" placeholder="Ex: Josi" type="text" name="tratamento" id="tratamento" size="40" required />
         </div>
-    </fieldset>
-
-    @*<fieldset>
-            <div class="campo">
-                <label for="email"><strong>Email: </strong></label>
-                <input type="email" name="email" id="email" required />
-            </div>
-        </fieldset>*@
+    </div>
+    <br />
 
     <!-- Tipo de Pessoa -->
 
-
-
-    <div class="check">
+    <form class="was-validated">
         <label><strong>Tipo de Pessoa:</strong></label>
-        <br />
-        <label>
-            <input type="radio" name="tipoPessoa" @*value="@SelectedValue" *@ id="fisica" /> Física
-        </label>
-        <label>
-            <input type="radio" name="tipoPessoa" value="juridica" /> Jurídica
-        </label>
-    </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+            <label class="custom-control-label" for="customControlValidation2"><strong>Física</strong></label>
+        </div>
+        <div class="custom-control custom-radio mb-3">
+            <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+            <label class="custom-control-label" for="customControlValidation3"><strong>Jurídica</strong></label>
+            <div class="invalid-feedback">Escolha uma das opções</div>
+        </div>
+    </form>
 
     <!-- Criar if para habilitar pelo tipo de pessoa -->
     <!-- Pessoa Física-->
     <fieldset class="grupo">
         <div class="campo">
             <label for="cpf"><strong>CPF</strong></label>
-            <input type="text" name="cpf" id="cpf" required @*@bind="campoCPF" *@ disabled />
+            <input class="form-control" type="text" name="cpf" id="cpf" required @*@bind="campoCPF" *@ disabled />
         </div>
         <div class="campo">
             <label for="rg"><strong>RG</strong></label>
-            <input type="text" name="rg" id="rg" required disabled />
+            <input class="form-control" type="text" name="rg" id="rg" required disabled />
         </div>
         <div class="campo">
             <label for="cnpj"><strong>CNPJ</strong></label>
-            <input type="text" name="cnpj" id="cnpj" required disabled />
+            <input class="form-control" type="text" name="cnpj" id="cnpj" required disabled />
         </div>
     </fieldset>
 
@@ -65,21 +57,21 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="iEstadual"><strong>Inscrição Estadual</strong></label>
-            <input type="text" name="iEstadual" id="iEstadual" disabled />
+            <input class="form-control" type="text" name="iEstadual" id="iEstadual" disabled />
         </div>
         <div class="campo">
             <label for="iMunicipal"><strong>Inscrição Municipal</strong></label>
-            <input type="text" name="iMunicipal" id="iMunicipal" disabled />
+            <input class="form-control" type="text" name="iMunicipal" id="iMunicipal" disabled />
         </div>
     </fieldset>
     <fieldset class="grupo">
         <div class="campo">
             <label for="regime"><strong>Regime Tributário</strong></label>
-            <input type="text" name="regime" id="regime" disabled />
+            <input class="form-control" type="text" name="regime" id="regime" disabled />
         </div>
         <div class="campo">
             <label for="contribuinte"><strong>Contribuinte</strong></label>
-            <input type="text" name="contribuinte" id="contribuinte" disabled />
+            <input class="form-control" type="text" name="contribuinte" id="contribuinte" disabled />
         </div>
     </fieldset>
 
@@ -89,25 +81,25 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="endereco"><strong>Endereço</strong></label>
-            <input type="text" name="endereco" id="endereco" size="60" />
+            <input class="form-control" type="text" name="endereco" id="endereco" size="60" />
         </div>
         <div class="campo">
             <label for="numero"><strong>Nº</strong></label>
-            <input type="text" name="numero" id="numero" size="1" />
+            <input class="form-control" type="text" name="numero" id="numero" size="1" />
         </div>
     </fieldset>
     <fieldset class="grupo">
         <div class="campo">
             <label for="complemento"><strong>Complemento</strong></label>
-            <input type="text" name="complemento" id="complemento" />
+            <input class="form-control" type="text" name="complemento" id="complemento" />
         </div>
         <div class="campo">
             <label for="bairro"><strong>Bairro</strong></label>
-            <input type="text" name="bairro" id="bairro" size="30" />
+            <input class="form-control" type="text" name="bairro" id="bairro" size="30" />
         </div>
         <div class="campo">
             <label for="cep"><strong>CEP</strong></label>
-            <input type="text" name="cep" id="cep" size="20" />
+            <input class="form-control" type="text" name="cep" id="cep" size="20" />
         </div>
     </fieldset>
 
@@ -115,11 +107,11 @@
 
         <div class="campo">
             <label for="cidade"><strong>Cidade</strong></label>
-            <input type="text" name="cidade" id="cidade" size="20" />
+            <input class="form-control" type="text" name="cidade" id="cidade" size="20" />
         </div>
         <div class="campo">
             <label for="estado"><strong>Estado</strong></label>
-            <input type="text" name="estado" id="estado" size="20" />
+            <input class="form-control" type="text" name="estado" id="estado" size="20" />
         </div>
     </fieldset>
 
@@ -128,40 +120,44 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="nomeContato"><strong>Nome</strong></label>
-            <input type="text" name="nomeContato" id="nomeContato" size="60" />
+            <input class="form-control" type="text" name="nomeContato" id="nomeContato" size="60" />
         </div>
         <div class="campo">
             <label for="telefone"><strong>Telefone</strong></label>
-            <input type="text" name="telefone" id="telefone" size="15" />
+            <input class="form-control" type="text" name="telefone" id="telefone" />
         </div>
     </fieldset>
     <fieldset class="grupo">
         <div class="campo">
             <label for="email"><strong>E-mail</strong></label>
-            <input type="email" name="email" id="email" size="35" />
+            <div class="input-group">
+                <div class="input-group-text">@@</div>
+                <input class="form-control" type="email" name="email" id="email" size="55" />
+            </div>
         </div>
         <div class="campo">
             <label for="setor"><strong>Setor</strong></label>
-            <input type="text" name="setor" id="setor" />
+            <input class="form-control" type="text" name="setor" id="setor" />
         </div>
     </fieldset>
-    <div class="check">
-        <label><strong>Definir contato como:</strong></label>
-        <br />
-        <label>
-            <input type="checkbox" name="definirContato" value="signatario" /> Signatário
-        </label>
-        <br />
-        <label>
-            <input type="checkbox" name="definirContato" value="RepresentanteLegal" /> Representante Legal
-        </label>
-    </div>
 
+    <label><strong>Definir contato como:</strong></label>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Signatário</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customCheck2">Representante Legal</label>
+    </div>
+    <br />
     <!-- Botão para enviar formulário -->
 
-    <button class="btn btn-primary" type="submit" onsubmit=""><strong>Enviar</strong></button>
+    <button class="btn btn-outline-success btn-lg btn-block" align="center" type="submit" onsubmit=""><strong>Enviar</strong></button>
 
 </form>
+
 
 @*@code{
         //[Parameter]

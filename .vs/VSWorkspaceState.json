@@ -1,5 +1,6 @@
 {
   "ExpandedNodes": [
+    "",
     "\\API",
     "\\API\\API",
     "\\API\\API\\Models",
@@ -7,5 +8,6 @@
     "\\BlazorApp\\Data",
     "\\BlazorApp\\Pages"
   ],
+  "SelectedNode": "\\LocadorApp.sln",
   "PreviewInSolutionExplorer": false
 }

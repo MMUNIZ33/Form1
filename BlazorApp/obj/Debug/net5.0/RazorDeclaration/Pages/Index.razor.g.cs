@@ -98,11 +98,12 @@ using API.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 241 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
+#line 242 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
  
 
     public string txtName, txtTelefone, txtEmail;
     List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
+    public string habilitar = "disabled";
 
     private void ForTable()
     {

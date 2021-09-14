@@ -4,8 +4,8 @@
 
 <p>Vamos realizar seu Pre-Cadastro</p>
 
-<br />
-<h4>Dados básicos</h4>
+
+<SurveyPrompt Title="Dados Básicos" />
 
 <!-- Formulário Principal -->
 
@@ -31,11 +31,13 @@
 
     <!-- Tipo de Pessoa -->
 
+
+
     <div class="check">
         <label><strong>Tipo de Pessoa:</strong></label>
         <br />
         <label>
-            <input  type="radio" name="tipoPessoa" @*value="@SelectedValue"*@ id="fisica" /> Física
+            <input type="radio" name="tipoPessoa" @*value="@SelectedValue" *@ id="fisica" /> Física
         </label>
         <label>
             <input type="radio" name="tipoPessoa" value="juridica" /> Jurídica
@@ -47,7 +49,7 @@
     <fieldset class="grupo">
         <div class="campo">
             <label for="cpf"><strong>CPF</strong></label>
-            <input type="text" name="cpf" id="cpf" required @*@bind="campoCPF"*@ disabled />
+            <input type="text" name="cpf" id="cpf" required @*@bind="campoCPF" *@ disabled />
         </div>
         <div class="campo">
             <label for="rg"><strong>RG</strong></label>
@@ -81,13 +83,13 @@
         </div>
     </fieldset>
 
-    <br />
-    <h4>Logradouro</h4>
+
+    <SurveyPrompt Title="Logradouro" />
 
     <fieldset class="grupo">
         <div class="campo">
             <label for="endereco"><strong>Endereço</strong></label>
-            <input type="text" name="endereco" id="endereco" size="40" />
+            <input type="text" name="endereco" id="endereco" size="60" />
         </div>
         <div class="campo">
             <label for="numero"><strong>Nº</strong></label>
@@ -101,7 +103,7 @@
         </div>
         <div class="campo">
             <label for="bairro"><strong>Bairro</strong></label>
-            <input type="text" name="bairro" id="bairro" />
+            <input type="text" name="bairro" id="bairro" size="30" />
         </div>
         <div class="campo">
             <label for="cep"><strong>CEP</strong></label>
@@ -121,8 +123,7 @@
         </div>
     </fieldset>
 
-    <br />
-    <h4>Principais Contatos</h4>
+    <SurveyPrompt Title="Principais Contatos" />
 
     <fieldset class="grupo">
         <div class="campo">
@@ -163,30 +164,30 @@
 </form>
 
 @*@code{
-    //[Parameter]
-    //public TValue SelectedValue { get; set; }
+        //[Parameter]
+        //public TValue SelectedValue { get; set; }
 
-    //private void OnChange(ChangeEventArgs args)
-    //{
-    //    CurrentValueAsString = args.Value.ToString();
-    //}
+        //private void OnChange(ChangeEventArgs args)
+        //{
+        //    CurrentValueAsString = args.Value.ToString();
+        //}
 
-    public bool tipoPessoa, pessoaFisica, pessoaJuridica, campoCPF;
-    public bool fisicaBool { get; set; }
+        public bool tipoPessoa, pessoaFisica, pessoaJuridica, campoCPF;
+        public bool fisicaBool { get; set; }
 
-    private void HabilitarCampos()
-    {
-        if (fisicaBool == true)
+        private void HabilitarCampos()
+        {
+            if (fisicaBool == true)
+            {
+
+            }
+        }
+
+        private void HabilitarJuridica()
         {
 
         }
-    }
-
-    private void HabilitarJuridica()
-    {
-
-    }
-}*@
+    }*@
 
 
 
@@ -242,6 +243,7 @@
 
     public string txtName, txtTelefone, txtEmail;
     List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
+    public string habilitar = "disabled";
 
     private void ForTable()
     {
@@ -282,7 +284,6 @@
     <Todo />*@
 
 
-<SurveyPrompt Title="How is Blazor working for you?" />
 
 @* <Counter IncrementAmout="10" /> *@
 

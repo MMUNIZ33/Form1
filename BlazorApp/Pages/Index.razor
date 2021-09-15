@@ -1,14 +1,20 @@
 @page "/"
 @using API.Models;
-<h1>Bem-vindo</h1>
 
-<p>Vamos realizar seu Pre-Cadastro</p>
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Bem-vindo!</h1>
+        <p class="lead">Vamos realizar seu Pre-Cadastro.</p>
+    </div>
+</div>
+
 
 <SurveyPrompt Title="Dados Básicos" />
 
 <!-- Formulário Principal -->
 
 <form>
+    <!--Nome e Tratamento-->
     <div class="row">
         <div class="col">
             <label for="name"><strong>Nome Completo </strong></label>
@@ -21,125 +27,134 @@
     </div>
     <br />
 
-    <!-- Tipo de Pessoa -->
+    <!--Radio Tipo de Pessoa -->
 
-    <form class="was-validated">
+    <div class="form-group">
         <label><strong>Tipo de Pessoa:</strong></label>
-        <div class="custom-control custom-radio">
+        <br />
+        <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation2"><strong>Física</strong></label>
+            <label class="custom-control-label" for="customControlValidation2">Física</label>
         </div>
-        <div class="custom-control custom-radio mb-3">
+        <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation3"><strong>Jurídica</strong></label>
+            <label class="custom-control-label" for="customControlValidation3">Jurídica</label>
             <div class="invalid-feedback">Escolha uma das opções</div>
         </div>
-    </form>
+    </div>
 
     <!-- Criar if para habilitar pelo tipo de pessoa -->
-    <!-- Pessoa Física-->
-    <fieldset class="grupo">
-        <div class="campo">
+    <!-- Campos -->
+    <div class="form-row">
+        <div class="form-group col-md-4">
             <label for="cpf"><strong>CPF</strong></label>
             <input class="form-control" type="text" name="cpf" id="cpf" required @*@bind="campoCPF" *@ disabled />
         </div>
-        <div class="campo">
+        <div class="form-group col-md-4">
             <label for="rg"><strong>RG</strong></label>
             <input class="form-control" type="text" name="rg" id="rg" required disabled />
         </div>
-        <div class="campo">
+        <div class="form-group col-md-4">
             <label for="cnpj"><strong>CNPJ</strong></label>
             <input class="form-control" type="text" name="cnpj" id="cnpj" required disabled />
         </div>
-    </fieldset>
+    </div>
 
-    <!-- Pessoa Jurídica-->
-    <fieldset class="grupo">
-        <div class="campo">
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="dateNas"><strong>Data de Nascimento / Data de Fundação</strong></label>
+            <input class="form-control" type="text" name="dateNas" id="dateNas" />
+        </div>
+        <div class="form-group col">
             <label for="iEstadual"><strong>Inscrição Estadual</strong></label>
             <input class="form-control" type="text" name="iEstadual" id="iEstadual" disabled />
         </div>
-        <div class="campo">
+        <div class="form-group col">
             <label for="iMunicipal"><strong>Inscrição Municipal</strong></label>
             <input class="form-control" type="text" name="iMunicipal" id="iMunicipal" disabled />
         </div>
-    </fieldset>
-    <fieldset class="grupo">
-        <div class="campo">
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
             <label for="regime"><strong>Regime Tributário</strong></label>
             <input class="form-control" type="text" name="regime" id="regime" disabled />
         </div>
-        <div class="campo">
+        <div class="form-group col">
             <label for="contribuinte"><strong>Contribuinte</strong></label>
             <input class="form-control" type="text" name="contribuinte" id="contribuinte" disabled />
         </div>
-    </fieldset>
+    </div>
 
 
     <SurveyPrompt Title="Logradouro" />
 
-    <fieldset class="grupo">
-        <div class="campo">
+    <div class="form-row">
+        <div class="form-group col">
             <label for="endereco"><strong>Endereço</strong></label>
             <input class="form-control" type="text" name="endereco" id="endereco" size="60" />
         </div>
-        <div class="campo">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-1">
             <label for="numero"><strong>Nº</strong></label>
             <input class="form-control" type="text" name="numero" id="numero" size="1" />
         </div>
-    </fieldset>
-    <fieldset class="grupo">
-        <div class="campo">
+        <div class="form-group col">
             <label for="complemento"><strong>Complemento</strong></label>
             <input class="form-control" type="text" name="complemento" id="complemento" />
         </div>
-        <div class="campo">
+        <div class="form-group col">
             <label for="bairro"><strong>Bairro</strong></label>
             <input class="form-control" type="text" name="bairro" id="bairro" size="30" />
         </div>
-        <div class="campo">
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
             <label for="cep"><strong>CEP</strong></label>
             <input class="form-control" type="text" name="cep" id="cep" size="20" />
         </div>
-    </fieldset>
-
-    <fieldset class="grupo">
-
-        <div class="campo">
+        <div class="form-group col">
             <label for="cidade"><strong>Cidade</strong></label>
             <input class="form-control" type="text" name="cidade" id="cidade" size="20" />
         </div>
-        <div class="campo">
+        <div class="form-group col">
             <label for="estado"><strong>Estado</strong></label>
             <input class="form-control" type="text" name="estado" id="estado" size="20" />
         </div>
-    </fieldset>
+    </div>
 
     <SurveyPrompt Title="Principais Contatos" />
 
-    <fieldset class="grupo">
-        <div class="campo">
+    <div class="form-row">
+        <div class="form-group col">
             <label for="nomeContato"><strong>Nome</strong></label>
             <input class="form-control" type="text" name="nomeContato" id="nomeContato" size="60" />
         </div>
-        <div class="campo">
+        <div class="form-group col-md-4">
             <label for="telefone"><strong>Telefone</strong></label>
             <input class="form-control" type="text" name="telefone" id="telefone" />
         </div>
-    </fieldset>
-    <fieldset class="grupo">
-        <div class="campo">
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
             <label for="email"><strong>E-mail</strong></label>
             <div class="input-group">
                 <div class="input-group-text">@@</div>
                 <input class="form-control" type="email" name="email" id="email" size="55" />
             </div>
         </div>
-        <div class="campo">
+        <div class="form-group col-md-4">
             <label for="setor"><strong>Setor</strong></label>
-            <input class="form-control" type="text" name="setor" id="setor" />
+            <select class="custom-select" id="inlineFormCustomSelectPref">
+                <option selected>Escolha...</option>
+                <option value="1">LOGÍSTICA</option>
+                <option value="2">ADMINISTRAÇÃO</option>
+                <option value="3">ALMOXARIFADO</option>
+                <option value="3">OFICINA</option>
+                <option value="3">COMERCIAL</option>
+            </select>
         </div>
-    </fieldset>
+    </div>
 
     <label><strong>Definir contato como:</strong></label>
 

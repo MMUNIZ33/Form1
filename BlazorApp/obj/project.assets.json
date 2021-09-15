@@ -5914,11 +5914,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\BlazorApp\\BlazorApp.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus Muniz\\source\\repos\\MMUNIZ33\\Form1\\BlazorApp\\BlazorApp.csproj",
       "projectName": "BlazorApp",
-      "projectPath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\BlazorApp\\BlazorApp.csproj",
+      "projectPath": "C:\\Users\\Matheus Muniz\\source\\repos\\MMUNIZ33\\Form1\\BlazorApp\\BlazorApp.csproj",
       "packagesPath": "C:\\Users\\Matheus Muniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\BlazorApp\\obj\\",
+      "outputPath": "C:\\Users\\Matheus Muniz\\source\\repos\\MMUNIZ33\\Form1\\BlazorApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matheus Muniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5935,8 +5935,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj": {
-              "projectPath": "C:\\Users\\Matheus Muniz\\Source\\Repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj"
+            "C:\\Users\\Matheus Muniz\\source\\repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj": {
+              "projectPath": "C:\\Users\\Matheus Muniz\\source\\repos\\MMUNIZ33\\Form1\\API\\API\\API.csproj"
             }
           }
         }
@@ -5968,7 +5968,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

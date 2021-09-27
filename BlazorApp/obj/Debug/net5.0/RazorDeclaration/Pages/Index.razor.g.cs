@@ -98,24 +98,24 @@ using API.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 253 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
+#line 215 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\Index.razor"
  
 
-    public string txtName, txtTelefone, txtEmail;
-    List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
-    public string habilitar = "disabled";
+	public string txtName, txtTelefone, txtEmail;
+	List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
+	public string habilitar = "disabled";
 
-    private void ForTable()
-    {
-        var contato = new tbl_Clientes_PreCadastro_Contato();
-        //if (!string.IsNullOrWhiteSpace(txtName))
-        //{
-        contato.Contato = txtName;
-        contato.Telefone = txtTelefone;
+	private void ForTable()
+	{
+		var contato = new tbl_Clientes_PreCadastro_Contato();
+		//if (!string.IsNullOrWhiteSpace(txtName))
+		//{
+		contato.Contato = txtName;
+		contato.Telefone = txtTelefone;
 
-        Contatos.Add(contato);
-        //}
-    }
+		Contatos.Add(contato);
+		//}
+	}
 
 
 #line default

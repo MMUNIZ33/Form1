@@ -1,204 +1,166 @@
 @page "/"
 @using API.Models;
 
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-4">Bem-vindo!</h1>
-        <p class="lead">Vamos realizar seu Pre-Cadastro.</p>
-    </div>
-</div>
+<body>
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<h2 class="display-4">Bem-vindo ao Locador!</h2>
+			<p class="lead">Vamos realizar seu Pre-Cadastro.</p>
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="col">
+			<DiaBox Title="Leia os Termos">
+				Termos Indisponível.
+			</DiaBox>
+		</div>
+		<div class="col">
+			<DiaBox Title="Leia o Contrato">
+				Contrato Indisponível.
+			</DiaBox>
+		</div>
+	</div>
 
 
-<SurveyPrompt Title="Dados Básicos" />
+	<SurveyPrompt Title="Dados Básicos" descricao="| Apenas o necessário."/>
 
-<!-- Formulário Principal -->
+	<!-- Formulário Principal -->
 
-<form>
-    <!--Nome e Tratamento-->
-    <div class="row">
-        <div class="col">
-            <label for="name"><strong>Nome Completo </strong></label>
-            <input class="form-control" placeholder="Ex: Josiane Silva" type="text" name="nome" id="nome" size="60" required />
-        </div>
-        <div class="col">
-            <label for="tratamento"><strong>Tratamento </strong></label>
-            <input class="form-control" placeholder="Ex: Josi" type="text" name="tratamento" id="tratamento" size="40" required />
-        </div>
-    </div>
-    <br />
+	<form>
+		<!--Nome e Tratamento-->
+		<div class="row">
+			<BoxText Title="Nome Completo" Sub="Ex: Josiane Silva"/>
+			<BoxText Title="Tratamento" Sub="Ex: Josi"/>
+		</div>
 
-    <!--Radio Tipo de Pessoa -->
+		<!--Radio Tipo de Pessoa -->
 
-    <div class="form-group">
-        <label><strong>Tipo de Pessoa:</strong></label>
-        <br />
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation2">Física</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-            <label class="custom-control-label" for="customControlValidation3">Jurídica</label>
-            <div class="invalid-feedback">Escolha uma das opções</div>
-        </div>
-    </div>
+		<div class="form-group">
+			<label><strong>Tipo de Pessoa:</strong></label>
+			<br />
+			<RadioBtn NameRadios="radios" Title="Física"></RadioBtn>
+			<RadioBtn NameRadios="radios" Title="Júridica"></RadioBtn>
+			@*<div class="custom-control custom-radio custom-control-inline">
+				<input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked2" required>
+				<label class="custom-control-label" for="customControlValidation3">Jurídica</label>
+			</div>*@
+		</div>
 
-    <!-- Criar if para habilitar pelo tipo de pessoa -->
-    <!-- Campos -->
-    <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="cpf"><strong>CPF</strong></label>
-            <input class="form-control" type="text" name="cpf" id="cpf" required @*@bind="campoCPF" *@ disabled />
-        </div>
-        <div class="form-group col-md-4">
-            <label for="rg"><strong>RG</strong></label>
-            <input class="form-control" type="text" name="rg" id="rg" required disabled />
-        </div>
-        <div class="form-group col-md-4">
-            <label for="cnpj"><strong>CNPJ</strong></label>
-            <input class="form-control" type="text" name="cnpj" id="cnpj" required disabled />
-        </div>
-    </div>
+		<!-- Criar if para habilitar pelo tipo de pessoa -->
+		<!-- Campos -->
+		<div class="form-row">
+			<BoxText Title="CPF" />
+			<BoxText Title="RG" />
+			<BoxText Title="CNPJ" />
+		</div>
 
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="dateNas"><strong>Data de Nascimento / Data de Fundação</strong></label>
-            <input class="form-control" type="text" name="dateNas" id="dateNas" />
-        </div>
-        <div class="form-group col">
-            <label for="iEstadual"><strong>Inscrição Estadual</strong></label>
-            <input class="form-control" type="text" name="iEstadual" id="iEstadual" disabled />
-        </div>
-        <div class="form-group col">
-            <label for="iMunicipal"><strong>Inscrição Municipal</strong></label>
-            <input class="form-control" type="text" name="iMunicipal" id="iMunicipal" disabled />
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="regime"><strong>Regime Tributário</strong></label>
-            <input class="form-control" type="text" name="regime" id="regime" disabled />
-        </div>
-        <div class="form-group col">
-            <label for="contribuinte"><strong>Contribuinte</strong></label>
-            <input class="form-control" type="text" name="contribuinte" id="contribuinte" disabled />
-        </div>
-    </div>
+		<div class="form-row">
+			<BoxText Title="Data de Nascimento / Data de Fundação" />
+			<BoxText Title="Inscrição Estadual" />
+			<BoxText Title="Inscrição Municipal" />
+		</div>
+		<div class="form-row">
+			<BoxText Title="Regime Tributário" />
+			<BoxText Title="Contribuinte" />
+		</div>
 
 
-    <SurveyPrompt Title="Logradouro" />
+		<SurveyPrompt Title="Logradouro" />
 
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="endereco"><strong>Endereço</strong></label>
-            <input class="form-control" type="text" name="endereco" id="endereco" size="60" />
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-1">
-            <label for="numero"><strong>Nº</strong></label>
-            <input class="form-control" type="text" name="numero" id="numero" size="1" />
-        </div>
-        <div class="form-group col">
-            <label for="complemento"><strong>Complemento</strong></label>
-            <input class="form-control" type="text" name="complemento" id="complemento" />
-        </div>
-        <div class="form-group col">
-            <label for="bairro"><strong>Bairro</strong></label>
-            <input class="form-control" type="text" name="bairro" id="bairro" size="30" />
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="cep"><strong>CEP</strong></label>
-            <input class="form-control" type="text" name="cep" id="cep" size="20" />
-        </div>
-        <div class="form-group col">
-            <label for="cidade"><strong>Cidade</strong></label>
-            <input class="form-control" type="text" name="cidade" id="cidade" size="20" />
-        </div>
-        <div class="form-group col">
-            <label for="estado"><strong>Estado</strong></label>
-            <input class="form-control" type="text" name="estado" id="estado" size="20" />
-        </div>
-    </div>
+		<div class="form-row">
+			<BoxText Title="Endereço" />
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-1">
+				<label for="numero"><strong>Nº</strong></label>
+				<input class="form-control" type="text" name="numero" id="numero" size="1" />
+			</div>
+			<BoxText Title="Complemento" />
+			<BoxText Title="Bairro" />
+		</div>
+		<div class="form-row">
+			<BoxText Title="CEP" />
+			<BoxText Title="Cidade" />
+			<BoxText Title="Estado" />
+		</div>
 
-    <SurveyPrompt Title="Principais Contatos" />
+		<SurveyPrompt Title="Principais Contatos" />
 
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="nomeContato"><strong>Nome</strong></label>
-            <input class="form-control" type="text" name="nomeContato" id="nomeContato" size="60" />
-        </div>
-        <div class="form-group col-md-4">
-            <label for="telefone"><strong>Telefone</strong></label>
-            <input class="form-control" type="text" name="telefone" id="telefone" />
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col">
-            <label for="email"><strong>E-mail</strong></label>
-            <div class="input-group">
-                <div class="input-group-text">@@</div>
-                <input class="form-control" type="email" name="email" id="email" size="55" />
-            </div>
-        </div>
-        <div class="form-group col-md-4">
-            <label for="setor"><strong>Setor</strong></label>
-            <select class="custom-select" id="inlineFormCustomSelectPref">
-                <option selected>Escolha...</option>
-                <option value="1">LOGÍSTICA</option>
-                <option value="2">ADMINISTRAÇÃO</option>
-                <option value="3">ALMOXARIFADO</option>
-                <option value="3">OFICINA</option>
-                <option value="3">COMERCIAL</option>
-            </select>
-        </div>
-    </div>
+		<div class="form-row">
+			<div class="form-group col">
+				<label for="nomeContato"><strong>Nome</strong></label>
+				<input class="form-control" type="text" name="nomeContato" id="nomeContato" size="60" />
+			</div>
+			<div class="form-group col-md-4">
+				<label for="telefone"><strong>Telefone</strong></label>
+				<input class="form-control" type="text" name="telefone" id="telefone" />
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col">
+				<label for="email"><strong>E-mail</strong></label>
+				<div class="input-group">
+					<div class="input-group-text">@@</div>
+					<input class="form-control" type="email" name="email" id="email" size="55" />
+				</div>
+			</div>
+			<div class="form-group col-md-4">
+				<label for="setor"><strong>Setor</strong></label>
+				<select class="custom-select" id="inlineFormCustomSelectPref">
+					<option selected>Escolha...</option>
+					<option value="1">LOGÍSTICA</option>
+					<option value="2">ADMINISTRAÇÃO</option>
+					<option value="3">ALMOXARIFADO</option>
+					<option value="3">OFICINA</option>
+					<option value="3">COMERCIAL</option>
+				</select>
+			</div>
+		</div>
 
-    <label><strong>Definir contato como:</strong></label>
+		<label><strong>Definir contato como:</strong></label>
 
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck1">
-        <label class="custom-control-label" for="customCheck1">Signatário</label>
-    </div>
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="customCheck2">
-        <label class="custom-control-label" for="customCheck2">Representante Legal</label>
-    </div>
-    <br />
-    <!-- Botão para enviar formulário -->
+		<div class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" id="customCheck1">
+			<label class="custom-control-label" for="customCheck1">Signatário</label>
+		</div>
+		<div class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" id="customCheck2">
+			<label class="custom-control-label" for="customCheck2">Representante Legal</label>
+		</div>
+		<br />
+		<!-- Botão para enviar formulário -->
 
-    <button class="btn btn-outline-success btn-lg btn-block" align="center" type="submit" onsubmit=""><strong>Enviar</strong></button>
+		<button class="btn btn-outline-success btn-lg btn-block" align="center" type="submit" onsubmit=""><strong>Enviar</strong></button>
 
-</form>
+	</form>
 
+</body>
 
 @*@code{
-        //[Parameter]
-        //public TValue SelectedValue { get; set; }
+		//[Parameter]
+		//public TValue SelectedValue { get; set; }
 
-        //private void OnChange(ChangeEventArgs args)
-        //{
-        //    CurrentValueAsString = args.Value.ToString();
-        //}
+		//private void OnChange(ChangeEventArgs args)
+		//{
+		//    CurrentValueAsString = args.Value.ToString();
+		//}
 
-        public bool tipoPessoa, pessoaFisica, pessoaJuridica, campoCPF;
-        public bool fisicaBool { get; set; }
+		public bool tipoPessoa, pessoaFisica, pessoaJuridica, campoCPF;
+		public bool fisicaBool { get; set; }
 
-        private void HabilitarCampos()
-        {
-            if (fisicaBool == true)
-            {
+		private void HabilitarCampos()
+		{
+			if (fisicaBool == true)
+			{
 
-            }
-        }
+			}
+		}
 
-        private void HabilitarJuridica()
-        {
+		private void HabilitarJuridica()
+		{
 
-        }
-    }*@
+		}
+	}*@
 
 
 
@@ -210,63 +172,63 @@
 
 <br />
 @*<table>
-        <tr>
-            <td>CNPJ:</td>
-            <td><input type="text" name="cnpj" size="8"> - <input type="text" name="cnpj2" size="5">  <br /></td>
-        </tr>
-        <tr>
-            <td>Inscrição Estadual:</td>
-            <td><input type="text" name="inscricaoEstadual" size="30"> <br /></td>
-        </tr>
-        <tr>
-            <td>Inscrição Municipal:</td>
-            <td><input type="text" name="inscricaoMunicipal" size="30" value="Não declarado"> <br /></td>
-        </tr>
-        <tr>
-            <td>Regime Tributário:</td>
-            <td><input type="text" name="regimeTributario" size="30" value="Simples Nacional"> <br /></td>
-        </tr>
-        <tr>
-            <td>Contribuinte:</td>
-            <td><input type="text" name="contribuinte" size="30" placeholder="Contribuinte ICMS"> <br /></td>
-        </tr>
-        <tr>
-            <td>Razão Social:</td>
-            <td><input type="text" disabled="disabled" name="RazaoSocial" size="60"> <br /></td>
-        </tr>
-        <tr>
-            <td>Nome Fantasia:</td>
-            <td><input type="text" name="nomeFantasia" size="60" @bind="txtName" /> <br /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td2>
-                <p>
-                    <button @onclick="ForTable">Enviar para tabela </button>
-                </p>
-            </td2>
-        </tr>
-    </table>*@
+		<tr>
+			<td>CNPJ:</td>
+			<td><input type="text" name="cnpj" size="8"> - <input type="text" name="cnpj2" size="5">  <br /></td>
+		</tr>
+		<tr>
+			<td>Inscrição Estadual:</td>
+			<td><input type="text" name="inscricaoEstadual" size="30"> <br /></td>
+		</tr>
+		<tr>
+			<td>Inscrição Municipal:</td>
+			<td><input type="text" name="inscricaoMunicipal" size="30" value="Não declarado"> <br /></td>
+		</tr>
+		<tr>
+			<td>Regime Tributário:</td>
+			<td><input type="text" name="regimeTributario" size="30" value="Simples Nacional"> <br /></td>
+		</tr>
+		<tr>
+			<td>Contribuinte:</td>
+			<td><input type="text" name="contribuinte" size="30" placeholder="Contribuinte ICMS"> <br /></td>
+		</tr>
+		<tr>
+			<td>Razão Social:</td>
+			<td><input type="text" disabled="disabled" name="RazaoSocial" size="60"> <br /></td>
+		</tr>
+		<tr>
+			<td>Nome Fantasia:</td>
+			<td><input type="text" name="nomeFantasia" size="60" @bind="txtName" /> <br /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td2>
+				<p>
+					<button @onclick="ForTable">Enviar para tabela </button>
+				</p>
+			</td2>
+		</tr>
+	</table>*@
 
 
 @code
 {
 
-    public string txtName, txtTelefone, txtEmail;
-    List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
-    public string habilitar = "disabled";
+	public string txtName, txtTelefone, txtEmail;
+	List<tbl_Clientes_PreCadastro_Contato> Contatos = new List<tbl_Clientes_PreCadastro_Contato>();
+	public string habilitar = "disabled";
 
-    private void ForTable()
-    {
-        var contato = new tbl_Clientes_PreCadastro_Contato();
-        //if (!string.IsNullOrWhiteSpace(txtName))
-        //{
-        contato.Contato = txtName;
-        contato.Telefone = txtTelefone;
+	private void ForTable()
+	{
+		var contato = new tbl_Clientes_PreCadastro_Contato();
+		//if (!string.IsNullOrWhiteSpace(txtName))
+		//{
+		contato.Contato = txtName;
+		contato.Telefone = txtTelefone;
 
-        Contatos.Add(contato);
-        //}
-    }
+		Contatos.Add(contato);
+		//}
+	}
 
 }
 
@@ -274,25 +236,25 @@
 
 
 @*<p>
-        <h5>Logradouro:</h5>
-    </p>*@
+		<h5>Logradouro:</h5>
+	</p>*@
 
 @*<table>
-        <tr>
-            <td>Rua:</td>
-            <td><input type="text" name="Rua" size="40"> Número: <input type="text" name="cnpj2" size="5">  <br /></td>
-        </tr>
-        <tr>
-            <td>Bairro:</td>
-            <td><input type="text" name="Bairro" size="40"><br /></td>
-        </tr>
-        <tr>
-            <td>CEP:</td>
-            <td><input type="text" name="Bairro" size="20"><br /></td>
-        </tr>
-    </table>
-    <p></p>
-    <Todo />*@
+		<tr>
+			<td>Rua:</td>
+			<td><input type="text" name="Rua" size="40"> Número: <input type="text" name="cnpj2" size="5">  <br /></td>
+		</tr>
+		<tr>
+			<td>Bairro:</td>
+			<td><input type="text" name="Bairro" size="40"><br /></td>
+		</tr>
+		<tr>
+			<td>CEP:</td>
+			<td><input type="text" name="Bairro" size="20"><br /></td>
+		</tr>
+	</table>
+	<p></p>
+	<Todo />*@
 
 
 

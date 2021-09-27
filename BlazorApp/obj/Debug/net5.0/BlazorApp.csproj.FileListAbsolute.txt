@@ -200,3 +200,9 @@ C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\Bl
 C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\ref\BlazorApp.dll
 C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\BlazorApp.pdb
 C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\BlazorApp.genruntimeconfig.cache
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\DiaBox.razor.g.cs
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\Razor\Pages\DiaBox.razor.g.cs
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\BoxText.razor.g.cs
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\Razor\Shared\BoxText.razor.g.cs
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\RadioBtn.razor.g.cs
+C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\obj\Debug\net5.0\Razor\Shared\RadioBtn.razor.g.cs

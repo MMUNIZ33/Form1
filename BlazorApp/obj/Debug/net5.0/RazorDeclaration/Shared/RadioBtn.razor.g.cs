@@ -82,7 +82,7 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class RadioBtn : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,13 +90,12 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Shared\SurveyPrompt.razor"
+#line 7 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Shared\RadioBtn.razor"
        
-	// Demonstrates how a parent component can supply parameters
+	[Parameter]
+	public string NameRadios { get; set; }
 	[Parameter]
 	public string Title { get; set; }
-	[Parameter]
-	public string descricao { get; set; }
 
 #line default
 #line hidden

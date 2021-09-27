@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorApp.Shared
+namespace BlazorApp.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,7 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class DiaBox : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,13 +90,26 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Shared\SurveyPrompt.razor"
+#line 12 "C:\Users\Matheus Muniz\Source\Repos\MMUNIZ33\Form1\BlazorApp\Pages\DiaBox.razor"
        
-	// Demonstrates how a parent component can supply parameters
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+
 	[Parameter]
 	public string Title { get; set; }
-	[Parameter]
-	public string descricao { get; set; }
+	public string BtnText { get; set; } = "Yes!";
+
+	private void OnYes()
+	{
+		if (BtnText == "Yes!")
+		{
+			BtnText = "OK";
+		}
+		else
+		{
+			BtnText = "Yes!";
+		}
+	}
 
 #line default
 #line hidden

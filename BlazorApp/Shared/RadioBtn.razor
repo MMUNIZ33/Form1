@@ -1,0 +1,12 @@
+﻿
+<div class="custom-control custom-radio custom-control-inline">
+	<input type="radio" class="custom-control-input" name=@NameRadios required >
+	<label class="custom-control-label">@Title</label>
+</div>
+
+@code {
+	[Parameter]
+	public string NameRadios { get; set; }
+	[Parameter]
+	public string Title { get; set; }
+}
